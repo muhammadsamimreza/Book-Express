@@ -6,14 +6,17 @@ import AuthLayout from "../Layouts/AuthLayout/AuthLayout";
 import Register from "../Auth/Register/Register";
 import Dashboard from "../Layouts/Dashboard/Dashboard";
 import AddedBook from "../pages/AddedBook/AddedBook";
+import AllBooks from "../pages/AllBooks/AllBooks";
 
 export const router = createBrowserRouter([
   {
     path: "/",
     Component: HomeLayout,
     children: [
-      
-      
+      {
+        path: '/allbooks',
+        Component: AllBooks,
+      }
     ],
   },
 
