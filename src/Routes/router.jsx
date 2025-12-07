@@ -4,6 +4,8 @@ import HomeLayout from "../Layouts/HomeLayout/HomeLayout";
 import Login from "../Auth/Login/Login";
 import AuthLayout from "../Layouts/AuthLayout/AuthLayout";
 import Register from "../Auth/Register/Register";
+import Dashboard from "../Layouts/Dashboard/Dashboard";
+import AddedBook from "../pages/AddedBook/AddedBook";
 
 export const router = createBrowserRouter([
   {
@@ -28,5 +30,18 @@ export const router = createBrowserRouter([
         Component: Register,
       }
     ]
+  },
+
+  {
+    path: '/',
+    Component: Dashboard,
+    children:[
+      {
+        path: 'dashboard/addbook',
+        Component: AddedBook,
+      }
+    ]
+
   }
+
 ]);
