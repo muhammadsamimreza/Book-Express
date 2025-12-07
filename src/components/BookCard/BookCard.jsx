@@ -23,7 +23,7 @@ const BookCard = ({book}) => {
 
       {/* Action */}
       <Link
-       to={`/books/${_id}`}
+       to={`/allbooks/${_id}`}
         className="mt-auto bg-primary text-white text-center py-2 rounded-lg hover:bg-blue-600 transition font-medium"
       >
         View Details

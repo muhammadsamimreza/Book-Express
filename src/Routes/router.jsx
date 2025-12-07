@@ -7,6 +7,7 @@ import Register from "../Auth/Register/Register";
 import Dashboard from "../Layouts/Dashboard/Dashboard";
 import AddedBook from "../pages/AddedBook/AddedBook";
 import AllBooks from "../pages/AllBooks/AllBooks";
+import BookDetails from "../pages/BookDetails/BookDetails";
 
 export const router = createBrowserRouter([
   {
@@ -16,6 +17,10 @@ export const router = createBrowserRouter([
       {
         path: '/allbooks',
         Component: AllBooks,
+      },
+      {
+        path: '/allbooks/:id',
+        Component: BookDetails
       }
     ],
   },
