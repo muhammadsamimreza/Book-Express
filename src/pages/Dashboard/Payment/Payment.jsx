@@ -20,6 +20,7 @@ const Payment = () => {
         price: book.price,
         bookTitle: book.bookTitle,
         bookId: book.bookId,
+        orderId: book._id,
         userEmail: book.userEmail
     }
     const res = await axiosSecure.post('/payment-checkout-session', paymentInfo);

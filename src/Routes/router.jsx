@@ -10,6 +10,8 @@ import AllBooks from "../pages/AllBooks/AllBooks";
 import BookDetails from "../pages/BookDetails/BookDetails";
 import MyOrder from "../pages/Dashboard/MyOrder/MyOrder";
 import Payment from "../pages/Dashboard/Payment/Payment";
+import PaymentSuccess from "../pages/Dashboard/Payment/PaymentSuccess";
+import paymentCancelled from "../pages/Dashboard/Payment/paymentCancelled";
 
 export const router = createBrowserRouter([
   {
@@ -17,49 +19,55 @@ export const router = createBrowserRouter([
     Component: HomeLayout,
     children: [
       {
-        path: '/allbooks',
+        path: "/allbooks",
         Component: AllBooks,
       },
       {
-        path: '/allbooks/:id',
-        Component: BookDetails
-      }
+        path: "/allbooks/:id",
+        Component: BookDetails,
+      },
     ],
   },
 
   {
-    path: '/',
+    path: "/",
     Component: AuthLayout,
     children: [
       {
-        path: 'login',
-        Component: Login
+        path: "login",
+        Component: Login,
       },
       {
-        path: 'register',
+        path: "register",
         Component: Register,
-      }
-    ]
+      },
+    ],
   },
 
   {
-    path: '/dashboard',
+    path: "/dashboard",
     Component: Dashboard,
-    children:[
+    children: [
       {
-        path: 'addbook',
+        path: "addbook",
         Component: AddedBook,
       },
       {
-        path: 'myorder',
+        path: "myorder",
         Component: MyOrder,
       },
       {
-        path: 'payment/:id',
-        Component: Payment
+        path: "payment/:id",
+        Component: Payment,
+      },
+      {
+        path: "payment-success",
+        Component: PaymentSuccess,
+      },
+      {
+        path: 'payment-cancelled',
+        Component: paymentCancelled
       }
-    ]
-
-  }
-
+    ],
+  },
 ]);
