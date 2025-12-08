@@ -1,5 +1,5 @@
 import React from "react";
-import { Link, Links, NavLink } from "react-router";
+import { Link, NavLink } from "react-router";
 import useAuth from "../../Hooks/useAuth";
 
 const Navbar = () => {
@@ -22,7 +22,7 @@ const Navbar = () => {
         <NavLink to="/allbooks">Books</NavLink>
       </li>
       <li>
-        <NavLink to="/dashboard/addBook">Dashboard</NavLink>
+        <NavLink to="/dashboard">Dashboard</NavLink>
       </li>
     </>
   );

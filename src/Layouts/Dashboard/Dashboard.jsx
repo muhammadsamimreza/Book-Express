@@ -1,5 +1,6 @@
 import React from "react";
-import { IoBookOutline, IoBookSharp } from "react-icons/io5";
+import { IoBookOutline} from "react-icons/io5";
+import { RiListUnordered } from "react-icons/ri";
 import { Link, Outlet } from "react-router";
 
 const Dashboard = () => {
@@ -80,6 +81,17 @@ const Dashboard = () => {
                   {/* Book icon */}
                  <IoBookOutline />
                   <span className="is-drawer-close:hidden">Add a Book</span>
+                </Link>
+              </li>
+              {/* Order List item */}
+              <li>
+                <Link to="/dashboard/myorder"
+                  className="is-drawer-close:tooltip is-drawer-close:tooltip-right"
+                  data-tip="My Order"
+                >
+                  {/* Book icon */}
+                 <RiListUnordered/>
+                  <span className="is-drawer-close:hidden">My Order</span>
                 </Link>
               </li>
 

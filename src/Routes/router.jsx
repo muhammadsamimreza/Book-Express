@@ -8,6 +8,7 @@ import Dashboard from "../Layouts/Dashboard/Dashboard";
 import AddedBook from "../pages/AddedBook/AddedBook";
 import AllBooks from "../pages/AllBooks/AllBooks";
 import BookDetails from "../pages/BookDetails/BookDetails";
+import MyOrder from "../pages/Dashboard/MyOrder/MyOrder";
 
 export const router = createBrowserRouter([
   {
@@ -41,12 +42,16 @@ export const router = createBrowserRouter([
   },
 
   {
-    path: '/',
+    path: '/dashboard',
     Component: Dashboard,
     children:[
       {
-        path: 'dashboard/addbook',
+        path: 'addbook',
         Component: AddedBook,
+      },
+      {
+        path: 'myorder',
+        Component: MyOrder,
       }
     ]
 
