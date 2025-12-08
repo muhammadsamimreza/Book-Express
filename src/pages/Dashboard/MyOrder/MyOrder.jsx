@@ -101,7 +101,7 @@ const MyOrder = () => {
                   {/* Pay Now Button */}
                   {isPending && (
                     <Link
-                      to={`/payment/${order._id}`}
+                      to={`/dashboard/payment/${order._id}`}
                       className="btn btn-sm btn-success"
                     >
                       Pay Now

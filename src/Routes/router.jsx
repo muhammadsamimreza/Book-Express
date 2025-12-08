@@ -9,6 +9,7 @@ import AddedBook from "../pages/AddedBook/AddedBook";
 import AllBooks from "../pages/AllBooks/AllBooks";
 import BookDetails from "../pages/BookDetails/BookDetails";
 import MyOrder from "../pages/Dashboard/MyOrder/MyOrder";
+import Payment from "../pages/Dashboard/Payment/Payment";
 
 export const router = createBrowserRouter([
   {
@@ -52,6 +53,10 @@ export const router = createBrowserRouter([
       {
         path: 'myorder',
         Component: MyOrder,
+      },
+      {
+        path: 'payment/:id',
+        Component: Payment
       }
     ]
 

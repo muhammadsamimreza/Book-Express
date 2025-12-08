@@ -31,6 +31,7 @@ const BookDetails = () => {
     const orderInfo = {
       userName: user.displayName,
       userEmail: user.email,
+      price: book.price,
       phone: data.phone,
       address: data.address,
       bookId: book._id,
