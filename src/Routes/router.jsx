@@ -17,6 +17,7 @@ import MyProfile from "../pages/Dashboard/MyProfile/MyProfile";
 import PrivateRoute from "./PrivateRoute";
 import AllOrders from "../pages/Dashboard/AllOrders/AllOrders";
 import AllBook from "../pages/Dashboard/AllBook/AllBook";
+import EditBook from "../pages/Dashboard/EditBookPage/EditBookPage";
 
 export const router = createBrowserRouter([
   {
@@ -51,7 +52,11 @@ export const router = createBrowserRouter([
 
   {
     path: "/dashboard",
-    element: <PrivateRoute><Dashboard></Dashboard></PrivateRoute>,
+    element: (
+      <PrivateRoute>
+        <Dashboard></Dashboard>
+      </PrivateRoute>
+    ),
     children: [
       {
         path: "addbook",
@@ -70,25 +75,29 @@ export const router = createBrowserRouter([
         Component: PaymentSuccess,
       },
       {
-        path: 'payment-cancelled',
-        Component: paymentCancelled
+        path: "payment-cancelled",
+        Component: paymentCancelled,
       },
       {
-        path: 'myinvoice',
-        Component: MyInvoice
+        path: "myinvoice",
+        Component: MyInvoice,
       },
       {
-        path: 'myprofile',
-        Component: MyProfile
+        path: "myprofile",
+        Component: MyProfile,
       },
       {
-        path: 'allorders',
+        path: "allorders",
         Component: AllOrders,
       },
       {
-        path: 'allBook',
-        Component: AllBook
-      }
+        path: "allBook",
+        Component: AllBook,
+      },
+      {
+        path: 'edit-book/:id',
+        Component: EditBook
+      },
     ],
   },
 ]);
