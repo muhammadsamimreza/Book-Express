@@ -23,7 +23,7 @@ const Login = () => {
         Swal.fire({
           position: "top-end",
           icon: "success",
-          title: "Your Book has been added",
+          title: "Successfully LogedIn",
           showConfirmButton: false,
           timer: 1500,
         });

@@ -18,6 +18,7 @@ import PrivateRoute from "./PrivateRoute";
 import AllOrders from "../pages/Dashboard/AllOrders/AllOrders";
 import AllBook from "../pages/Dashboard/AllBook/AllBook";
 import EditBook from "../pages/Dashboard/EditBookPage/EditBookPage";
+import AdminAllBooks from "../pages/Dashboard/AdminAllBooks/AdminAllBooks";
 
 export const router = createBrowserRouter([
   {
@@ -93,6 +94,10 @@ export const router = createBrowserRouter([
       {
         path: "allBook",
         Component: AllBook,
+      },
+      {
+        path: "allbooks",
+        Component: AdminAllBooks
       },
       {
         path: 'edit-book/:id',

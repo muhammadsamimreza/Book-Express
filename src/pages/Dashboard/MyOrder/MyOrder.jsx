@@ -55,6 +55,7 @@ const MyOrder = () => {
             <th>Book Title</th>
             <th>Order Date</th>
             <th>Status</th>
+            <th>Payment</th>
             <th className="text-center">Actions</th>
           </tr>
         </thead>
@@ -62,7 +63,8 @@ const MyOrder = () => {
         <tbody>
           {orders.map((order, index) => {
             const isPending = order.status === "pending";
-            const isPaid = order.status === "paid";
+            const isPaid = order.payment === "paid";
+            const isPayment = order.payment ==="unpaid"
            
 
             return (
@@ -86,10 +88,22 @@ const MyOrder = () => {
                     {order.status}
                   </span>
                 </td>
+                <td>
+                  <span
+                    className={`badge ${
+                      
+                        isPayment
+                        ? "badge-error"
+                        : "badge-success"
+                    }`}
+                  >
+                    {order.payment}
+                  </span>
+                </td>
 
                 <td className="flex gap-2 justify-center">
                   {/* Cancel Button */}
-                  {isPending && (
+                  {isPending && isPayment && (
                     <button
                       onClick={() => handleCancel(order._id)}
                       className="btn btn-sm btn-error"
@@ -99,7 +113,7 @@ const MyOrder = () => {
                   )}
 
                   {/* Pay Now Button */}
-                  {isPending && (
+                  {isPending && isPayment &&  (
                     <Link
                       to={`/dashboard/payment/${order._id}`}
                       className="btn btn-sm btn-success"

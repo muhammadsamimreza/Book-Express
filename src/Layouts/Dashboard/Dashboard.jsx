@@ -81,6 +81,22 @@ const Dashboard = () => {
                   <span className="is-drawer-close:hidden">Homepage</span>
                 </Link>
               </li>
+              {/* Admin Role */}
+              {role === "admin" && (
+                <>
+                  <li>
+                    <Link
+                      to="/dashboard/allbooks"
+                      className="is-drawer-close:tooltip is-drawer-close:tooltip-right"
+                      data-tip="All Book"
+                    >
+                      {/* Book icon */}
+                      <GoBook />
+                      <span className="is-drawer-close:hidden">All Book</span>
+                    </Link>
+                  </li>
+                </>
+              )}
               {/* Added item for role:librarian*/}
               {role === "librarian" && (
                 <>
