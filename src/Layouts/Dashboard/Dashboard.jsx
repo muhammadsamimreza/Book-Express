@@ -107,6 +107,18 @@ const Dashboard = () => {
                       <span className="is-drawer-close:hidden">All Book</span>
                     </Link>
                   </li>
+                  {/* Profile List item */}
+                  <li>
+                    <Link
+                      to="/dashboard/myprofile"
+                      className="is-drawer-close:tooltip is-drawer-close:tooltip-right"
+                      data-tip="My Profile"
+                    >
+                      {/* profile icon */}
+                      <CgProfile />
+                      <span className="is-drawer-close:hidden">My Profile</span>
+                    </Link>
+                  </li>
                 </>
               )}
               {/* Added item for role:librarian*/}
