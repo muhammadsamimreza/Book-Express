@@ -57,7 +57,7 @@ const Navbar = () => {
           </ul>
         </div>
         <Link to="/" className="text-2xl font-bold cursor-pointer">
-          <span className="text-green-600">Book</span>Express
+          <span className="text-green-600">Book</span>Courier
         </Link>
         <h1 className="ml-5">{user?.email}</h1>
       </div>
