@@ -20,12 +20,17 @@ import AllBook from "../pages/Dashboard/AllBook/AllBook";
 import EditBook from "../pages/Dashboard/EditBookPage/EditBookPage";
 import AdminAllBooks from "../pages/Dashboard/AdminAllBooks/AdminAllBooks";
 import AllUsers from "../pages/Dashboard/AllUsers/AllUsers";
+import { Banner } from "../components/Banner/Banner";
 
 export const router = createBrowserRouter([
   {
     path: "/",
     Component: HomeLayout,
     children: [
+      {
+        index: true,
+        Component: Banner
+      },
       {
         path: "/allbooks",
         Component: AllBooks,
