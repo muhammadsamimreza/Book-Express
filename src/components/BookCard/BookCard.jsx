@@ -8,11 +8,11 @@ const BookCard = ({book}) => {
     <div className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-all p-4 flex flex-col">
       
       {/* Book Image */}
-      <div className="w-full aspect-auto overflow-hidden rounded-lg mb-4">
+      <div className="w-full h-52 overflow-hidden rounded-lg mb-4">
         <img
           src={photoURL}
           alt={title}
-          className="w-full h-full object-cover hover:scale-105 transition-transform"
+          className="w-full h-full object-fit hover:scale-105 transition-transform"
         />
       </div>
 

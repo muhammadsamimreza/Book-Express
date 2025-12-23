@@ -15,17 +15,30 @@ const testimonials = [
 
 const Testimonials = () => {
   return (
-    <section className="my-20 px-4 md:px-12 text-center bg-gray-50 py-16 rounded-lg">
-      <h2 className="text-3xl font-bold mb-10">What Our Customers Say</h2>
-      <div className="grid md:grid-cols-3 gap-8">
-        {testimonials.map((t, idx) => (
-          <div key={idx} className="bg-white p-6 shadow-lg rounded-xl">
-            <p className="text-gray-600 mb-4">&quot;{t.feedback}&quot;</p>
-            <h4 className="font-semibold">{t.name}</h4>
-          </div>
-        ))}
+    <section className="my-20 px-4 md:px-12 text-center bg-gray-50 dark:bg-gray-900 py-16 rounded-lg">
+  <h2 className="text-3xl font-bold mb-12 text-gray-900 dark:text-gray-100">
+    What Our Customers Say
+  </h2>
+
+  <div className="grid gap-8 md:grid-cols-3">
+    {testimonials.map((t, idx) => (
+      <div key={idx} className="relative">
+        {/* Card */}
+        <div className="group bg-white dark:bg-gray-800 p-6 rounded-2xl border border-gray-100 dark:border-gray-700
+                        shadow-md hover:shadow-2xl transition-all duration-300 hover:-translate-y-2">
+          <div className="text-5xl text-indigo-500/20 mb-4">“</div>
+          <p className="text-gray-600 dark:text-gray-300 mb-6">
+            {t.feedback}
+          </p>
+
+          <h4 className="font-semibold text-gray-800 dark:text-gray-100">
+            {t.name}
+          </h4>
+        </div>
       </div>
-    </section>
+    ))}
+  </div>
+</section>
   );
 };
 
